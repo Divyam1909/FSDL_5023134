@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #e8f5e9;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+        }
+        .menu-item h3 {
+            margin: 5px 0;
+            color: #4CAF50;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #e8f5e9;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Green Delight</h1>
+        <p>Serving fresh and delicious food every day!</p>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <main>
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Paneer Butter Masala</h3>
+                <p>Creamy paneer curry with rich spices - ₹250</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Biryani</h3>
+                <p>Authentic Hyderabadi biryani with succulent chicken - ₹300</p>
+            </div>
+            <div class="menu-item">
+                <h3>Dal Tadka</h3>
+                <p>Flavorful yellow lentils tempered with spices - ₹180</p>
+            </div>
+            <div class="menu-item">
+                <h3>Butter Naan</h3>
+                <p>Soft and buttery Indian bread - ₹50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Masala Dosa</h3>
+                <p>South Indian crispy dosa filled with spicy potato mix - ₹120</p>
+            </div>
+            <div class="menu-item">
+                <h3>Gulab Jamun</h3>
+                <p>Soft and sweet milk dumplings soaked in sugar syrup - ₹90</p>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section id="register">
+            <h2>Register with Us</h2>
+            <form action="/register" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@greendelight.com</p>
+            <p>Phone: +91-9876543210</p>
+            <p>Address: 45, Green Street, Food City, India</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Green Delight. All rights reserved.</p>
+    </footer>
+</body>
+</html>

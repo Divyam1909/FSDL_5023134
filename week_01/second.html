@@ -3,131 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
+    <title>Gourmet Delights - Fine Dining Experience</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Styling */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #1c1c1c;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background-color: #4CAF50;
+            background-image: url('https://via.placeholder.com/1500x800?text=Restaurant+Image'); /* Replace with your restaurant's high-quality image */
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 15px 20px;
             text-align: center;
+            padding: 120px 20px;
+            height: 500px;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
         }
         nav {
-            background: #e8f5e9;
-            padding: 10px;
+            background-color: #333;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            margin: 0 15px;
+            margin: 0 30px;
             text-decoration: none;
-            color: #4CAF50;
+            color: #d4af37; /* Rich golden color */
             font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #f39c12; /* Slightly brighter gold */
         }
         main {
-            padding: 20px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         section {
-            margin-bottom: 30px;
+            margin-bottom: 60px;
+        }
+        section h2 {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        /* Menu Section */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
         }
         .menu-item {
-            margin-bottom: 10px;
+            flex: 1 1 calc(33% - 20px);
+            background: #2c2c2c;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         .menu-item h3 {
-            margin: 5px 0;
-            color: #4CAF50;
+            font-size: 1.6rem;
+            color: #d4af37;
+            margin-bottom: 10px;
         }
+        .menu-item p {
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+        /* Registration Form Styling */
         form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         form label {
             display: block;
-            margin-bottom: 5px;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 8px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            color: #f4f4f4;
+            font-weight: bold;
+        }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
             border-radius: 4px;
+            color: #333;
         }
         form button {
             width: 100%;
-            padding: 10px;
-            background: #4CAF50;
+            padding: 12px;
+            background: #d4af37;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 1.2rem;
         }
         form button:hover {
-            background: #45a049;
+            background: #f39c12;
         }
+        /* Footer Styling */
         footer {
             text-align: center;
-            padding: 10px;
-            background: #e8f5e9;
-            margin-top: 20px;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+        /* YouTube Video Embed */
+        .video-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Green Delight</h1>
-        <p>Serving fresh and delicious food every day!</p>
+        <h1>Gourmet Delights</h1>
+        <p>Where Culinary Excellence Meets Luxury</p>
     </header>
     <nav>
         <a href="#menu">Menu</a>
         <a href="#register">Register</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Contact</a>
     </nav>
     <main>
+        <!-- Video Section -->
+        <section class="video-container">
+            <h2>Watch Our Culinary Creations</h2>
+            <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="Food Blog Video"></iframe>
+        </section>
+
         <!-- Menu Section -->
         <section id="menu">
-            <h2>Our Menu</h2>
-            <div class="menu-item">
-                <h3>Paneer Butter Masala</h3>
-                <p>Creamy paneer curry with rich spices - ₹250</p>
-            </div>
-            <div class="menu-item">
-                <h3>Chicken Biryani</h3>
-                <p>Authentic Hyderabadi biryani with succulent chicken - ₹300</p>
-            </div>
-            <div class="menu-item">
-                <h3>Dal Tadka</h3>
-                <p>Flavorful yellow lentils tempered with spices - ₹180</p>
-            </div>
-            <div class="menu-item">
-                <h3>Butter Naan</h3>
-                <p>Soft and buttery Indian bread - ₹50</p>
-            </div>
-            <div class="menu-item">
-                <h3>Masala Dosa</h3>
-                <p>South Indian crispy dosa filled with spicy potato mix - ₹120</p>
-            </div>
-            <div class="menu-item">
-                <h3>Gulab Jamun</h3>
-                <p>Soft and sweet milk dumplings soaked in sugar syrup - ₹90</p>
+            <h2>Our Exquisite Menu</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Paneer+Butter+Masala" alt="Paneer Butter Masala">
+                    <h3>Paneer Butter Masala</h3>
+                    <p>Rich and creamy paneer curry with aromatic spices. ₹250</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Chicken+Biryani" alt="Chicken Biryani">
+                    <h3>Chicken Biryani</h3>
+                    <p>Aromatic biryani with tender chicken, cooked to perfection. ₹350</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Dal+Tadka" alt="Dal Tadka">
+                    <h3>Dal Tadka</h3>
+                    <p>A hearty lentil dish with a tempering of spices. ₹180</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Butter+Naan" alt="Butter Naan">
+                    <h3>Butter Naan</h3>
+                    <p>Soft and buttery Indian flatbread to accompany any curry. ₹80</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Masala+Dosa" alt="Masala Dosa">
+                    <h3>Masala Dosa</h3>
+                    <p>Crispy dosa filled with spiced potatoes and served with chutneys. ₹130</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/400x300?text=Gulab+Jamun" alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>Soft milk dumplings soaked in fragrant sugar syrup. ₹100</p>
+                </div>
             </div>
         </section>
 
         <!-- Registration Form Section -->
         <section id="register">
-            <h2>Register with Us</h2>
-            <form action="/register" method="post">
+            <h2>Register for Exclusive Offers</h2>
+            <form action="/register" method="post">~
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 
@@ -144,13 +237,10 @@
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Email: contact@greendelight.com</p>
+            <p>Email: contact@gourmetdelights.com</p>
             <p>Phone: +91-9876543210</p>
-            <p>Address: 45, Green Street, Food City, India</p>
+            <p>Address: 45 Luxury Lane, Culinary City, India</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Green Delight. All rights reserved.</p>
-    </footer>
 </body>
 </html>

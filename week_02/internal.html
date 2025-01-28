@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fr. C. R. Institute of Technology - Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #003366;
+            text-align: center;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #002244;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Registration</h1>
+        <nav>
+            <ul>
+                <li><a href="practice.html">Home</a></li>
+                <li><a href="inline.html">About Us</a></li>
+                <li><a href="internal.html">Student Registration</a></li>
+                <li><a href="external.html">Campus Life</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Register for Fr. C. R. Institute of Technology</h2>
+        <div class="image-container">
+            <img src="student.png" alt="Student Registration">
+        </div>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="program">Desired Program:</label>
+            <select id="program" name="program" required>
+                <option value="">Select a program</option>
+                <option value="engineering">Information Technology</option>
+                <option value="cs">Computer Science</option>
+                <option value="business">Electronics and Telecommunication Engineering</option>
+                <option value="sciences">Electrical</option>
+                <option value="research">Mechanical</option>
+            </select>
+
+            <input type="submit" value="Submit Application">
+        </form>
+    </main>
+</body>
+</html>

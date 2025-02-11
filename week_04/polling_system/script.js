@@ -1,50 +1,76 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("poll-form");
-  const results = document.getElementById("results");
+  const resultsList = document.getElementById("results-list");
+  const resetVotesButton = document.getElementById("reset-votes");
 
   // Object to store votes (in-memory demo)
   const votes = {
-    JavaScript: 0,
-    Python: 0,
-    Java: 0,
-    "C#": 0,
+    Samsung: 0,
+    iPhone: 0,
+    Nothing: 0,
+    OnePlus: 0,
+    Xiaomi: 0,
+    Oppo: 0,
   };
+
+  // Retrieve the user ID from localStorage
+  const userId = localStorage.getItem("userId");
+
+  // Check if the user has already voted
+  if (userId) {
+    alert("You have already voted.");
+    form.querySelectorAll('input[type="radio"]').forEach(input => {
+      input.disabled = true;
+    });
+    form.querySelector('button[type="submit"]').disabled = true;
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    
-    // Retrieve the user ID
-    const userId = document.getElementById("user-id").value.trim();
-    if (!userId) {
-      alert("Please enter your ID.");
-      return;
-    }
-    
-    // Check localStorage for already voted IDs
-    let votedIDs = JSON.parse(localStorage.getItem("votedIDs")) || [];
-    if (votedIDs.includes(userId)) {
-      alert("This ID has already voted.");
-      return;
-    }
-    
-    // Get the selected language
-    const selectedLanguage = document.querySelector('input[name="language"]:checked');
-    if (selectedLanguage) {
-      // Increment vote count and record the ID as having voted
-      votes[selectedLanguage.value]++;
-      votedIDs.push(userId);
-      localStorage.setItem("votedIDs", JSON.stringify(votedIDs));
+
+    // Retrieve the selected company
+    const selectedCompany = document.querySelector('input[name="company"]:checked');
+    if (selectedCompany) {
+      // Increment vote count
+      votes[selectedCompany.value]++;
+      // Store the user ID in localStorage
+      localStorage.setItem("userId", "voted");
+      // Disable voting options
+      form.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.disabled = true;
+      });
+      form.querySelector('button[type="submit"]').disabled = true;
+      // Update results
       updateResults();
     } else {
-      alert("Please select a programming language.");
+      alert("Please select a phone company.");
     }
   });
 
-  function updateResults() {
-    let resultsHTML = "<h2>Results:</h2>";
-    for (const [language, count] of Object.entries(votes)) {
-      resultsHTML += `<p>${language}: ${count} vote(s)</p>`;
+  resetVotesButton.addEventListener("click", () => {
+    // Clear all votes
+    for (let company in votes) {
+      votes[company] = 0;
     }
-    results.innerHTML = resultsHTML;
+    // Clear user ID from localStorage
+    localStorage.removeItem("userId");
+    // Enable voting options
+    form.querySelectorAll('input[type="radio"]').forEach(input => {
+      input.disabled = false;
+    });
+    form.querySelector('button[type="submit"]').disabled = false;
+    // Update results
+    updateResults();
+  });
+
+  function updateResults() {
+    // Clear previous results
+    resultsList.innerHTML = "";
+    // Display updated results
+    for (let company in votes) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${company}: ${votes[company]} vote(s)`;
+      resultsList.appendChild(listItem);
+    }
   }
 });

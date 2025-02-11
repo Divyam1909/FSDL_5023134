@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polling System</title>
+  <title>Phone Company Voting</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Favorite Programming Language</h1>
+    <h1>Vote for Your Favorite Phone Company</h1>
     <form id="poll-form">
       <!-- User ID Input -->
       <div class="input-group">
@@ -16,25 +16,41 @@
         <input type="text" id="user-id" name="user-id" placeholder="Enter your unique ID" required>
       </div>
       <!-- Poll Options -->
-      <div>
-        <input type="radio" id="js" name="language" value="JavaScript">
-        <label for="js">JavaScript</label>
-      </div>
-      <div>
-        <input type="radio" id="python" name="language" value="Python">
-        <label for="python">Python</label>
-      </div>
-      <div>
-        <input type="radio" id="java" name="language" value="Java">
-        <label for="java">Java</label>
-      </div>
-      <div>
-        <input type="radio" id="csharp" name="language" value="C#">
-        <label for="csharp">C#</label>
+      <div class="options">
+        <div class="option">
+          <input type="radio" id="samsung" name="company" value="Samsung">
+          <label for="samsung">Samsung</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="iphone" name="company" value="iPhone">
+          <label for="iphone">iPhone</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="nothing" name="company" value="Nothing">
+          <label for="nothing">Nothing</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="oneplus" name="company" value="OnePlus">
+          <label for="oneplus">OnePlus</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="xiaomi" name="company" value="Xiaomi">
+          <label for="xiaomi">Xiaomi</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="oppo" name="company" value="Oppo">
+          <label for="oppo">Oppo</label>
+        </div>
       </div>
       <button type="submit">Vote</button>
+      <button type="button" id="reset-votes">Reset Votes</button>
     </form>
-    <div id="results"></div>
+    <div id="results">
+      <h2>Results:</h2>
+      <ul id="results-list">
+        <!-- Results will be displayed here -->
+      </ul>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

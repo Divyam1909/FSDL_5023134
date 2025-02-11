@@ -23,7 +23,7 @@ function updateExpenseList() {
     item.classList.add("expense-item")
     item.innerHTML = `
             <span>${expense.description}</span>
-            <span>$${expense.amount.toFixed(2)}</span>
+            <span>₹${expense.amount.toFixed(2)}</span>  <!-- Changed $ to ₹ -->
             <button onclick="removeExpense(${index})">Remove</button>
         `
     expenseList.appendChild(item)
@@ -32,7 +32,7 @@ function updateExpenseList() {
 
 function updateTotal() {
   const total = expenses.reduce((sum, expense) => sum + expense.amount, 0)
-  totalDisplay.textContent = `Total: $${total.toFixed(2)}`
+  totalDisplay.textContent = `Total: ₹${total.toFixed(2)}`
 }
 
 function removeExpense(index) {
@@ -40,4 +40,3 @@ function removeExpense(index) {
   updateExpenseList()
   updateTotal()
 }
-

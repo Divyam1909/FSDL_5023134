@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Corner Cafe</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Cozy Corner Cafe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specialties">Specialties</a></li>
+          <li class="nav-item"><a class="nav-link" href="#wallet">Wallet</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero d-flex align-items-center text-center">
+    <div class="container">
+      <h1>Welcome to Cozy Corner Cafe</h1>
+      <p>Enjoy handcrafted coffee, delightful pastries, and healthy gourmet bites in a serene ambience.</p>
+      <a href="#menu" class="btn btn-primary btn-lg mt-3">View Our Menu</a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Menu</h2>
+      <div class="row g-4">
+        <!-- Coffee Card -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?coffee" class="card-img-top" alt="Coffee">
+            <div class="card-body">
+              <h5 class="card-title">Signature Coffee</h5>
+              <p class="card-text">Freshly brewed using our secret blend of premium beans.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pastries Card -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?pastry" class="card-img-top" alt="Pastries">
+            <div class="card-body">
+              <h5 class="card-title">Artisan Pastries</h5>
+              <p class="card-text">Delicious pastries baked fresh daily.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Sandwiches Card -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?sandwich" class="card-img-top" alt="Sandwiches">
+            <div class="card-body">
+              <h5 class="card-title">Gourmet Sandwiches</h5>
+              <p class="card-text">Hearty sandwiches made with locally sourced ingredients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Menu Section -->
+  <section id="specialties" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Specialty Menu</h2>
+      <div class="row g-4">
+        <!-- Seasonal Special -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?seasonal-food" class="card-img-top" alt="Seasonal Special">
+            <div class="card-body">
+              <h5 class="card-title">Seasonal Salad</h5>
+              <p class="card-text">A refreshing mix of organic greens and seasonal fruits.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Vegan Delight -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?vegan" class="card-img-top" alt="Vegan Delight">
+            <div class="card-body">
+              <h5 class="card-title">Vegan Delight</h5>
+              <p class="card-text">Plant-based dishes bursting with flavor.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Gluten-Free Option -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?gluten-free" class="card-img-top" alt="Gluten-Free">
+            <div class="card-body">
+              <h5 class="card-title">Gluten-Free Treats</h5>
+              <p class="card-text">Delicious options for gluten sensitive guests.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Chef's Special -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://source.unsplash.com/featured/?gourmet" class="card-img-top" alt="Chef Special">
+            <div class="card-body">
+              <h5 class="card-title">Chef's Special</h5>
+              <p class="card-text">A rotating dish crafted by our head chef every week.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wallet Section -->
+  <section id="wallet" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Digital Wallet & Rewards</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="lead text-center">Sign up to our digital wallet and enjoy seamless payments, exclusive rewards, and cashback offers every time you dine with us!</p>
+          <div class="d-flex justify-content-center mt-4">
+            <a href="#" class="btn btn-outline-primary me-2">Create Wallet</a>
+            <a href="#" class="btn btn-primary">View Rewards</a>
+          </div>
+          <div class="mt-5 text-center">
+            <img src="https://source.unsplash.com/featured/?mobile-wallet" alt="Digital Wallet" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">Cozy Corner Cafe is a locally loved coffee shop committed to delivering premium beverages and delicious treats in a cozy and welcoming environment. Our passion is to make every visit a delightful experience.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" rows="4" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Cozy Corner Cafe. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

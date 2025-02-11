@@ -1,0 +1,63 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Main Container */
+main {
+  padding: 40px 20px;
+}
+
+/* Card Container Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF6F61, #D72638);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Optional: Vary card colors for variety */
+.card:nth-child(2n) {
+  background: linear-gradient(135deg, #6A0572, #B5179E);
+}
+
+.card:nth-child(3n) {
+  background: linear-gradient(135deg, #1E6091, #1687A7);
+}

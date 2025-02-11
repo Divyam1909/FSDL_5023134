@@ -1,0 +1,72 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+}
+
+/* Main Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Game Box: a centered large box for the game */
+.game-box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Click Button Styles */
+#clickButton {
+  position: absolute; /* Positioned relative to .game-box */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#clickButton:hover {
+  background-color: #ff8a75;
+}
+
+/* Score and Timer */
+#score, #timer {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Restart Button Container */
+.hidden {
+  display: none;
+}
+#restart-container {
+  margin-top: 20px;
+}
+#restartButton {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#restartButton:hover {
+  background-color: #45a049;
+}

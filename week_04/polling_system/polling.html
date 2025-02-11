@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polling System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Favorite Programming Language</h1>
+    <form id="poll-form">
+      <!-- User ID Input -->
+      <div class="input-group">
+        <label for="user-id">Your ID:</label>
+        <input type="text" id="user-id" name="user-id" placeholder="Enter your unique ID" required>
+      </div>
+      <!-- Poll Options -->
+      <div>
+        <input type="radio" id="js" name="language" value="JavaScript">
+        <label for="js">JavaScript</label>
+      </div>
+      <div>
+        <input type="radio" id="python" name="language" value="Python">
+        <label for="python">Python</label>
+      </div>
+      <div>
+        <input type="radio" id="java" name="language" value="Java">
+        <label for="java">Java</label>
+      </div>
+      <div>
+        <input type="radio" id="csharp" name="language" value="C#">
+        <label for="csharp">C#</label>
+      </div>
+      <button type="submit">Vote</button>
+    </form>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

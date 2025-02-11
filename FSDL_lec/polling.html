@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .poll-container {
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .poll-option {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .poll-option input {
+            margin-right: 10px;
+        }
+        .results {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poll-container">
+        <h2>Which programming language do you prefer?</h2>
+        
+        <label for="userId">Enter User ID:</label>
+        <input type="text" id="userId" placeholder="Enter your ID" required>
+        
+        <form id="pollForm">
+            <div class="poll-option">
+                <input type="radio" name="poll" value="JavaScript" id="js"> <label for="js">JavaScript</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" name="poll" value="Python" id="python"> <label for="python">Python</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" name="poll" value="Java" id="java"> <label for="java">Java</label>
+            </div>
+            <button type="button" onclick="submitVote()">Vote</button>
+        </form>
+
+        <div class="results">
+            <h3>Results:</h3>
+            <p>JavaScript: <span id="jsCount">0</span> votes</p>
+            <p>Python: <span id="pythonCount">0</span> votes</p>
+            <p>Java: <span id="javaCount">0</span> votes</p>
+        </div>
+    </div>
+
+    <script>
+        function loadVotes() {
+            document.getElementById("jsCount").innerText = localStorage.getItem("JavaScript") || 0;
+            document.getElementById("pythonCount").innerText = localStorage.getItem("Python") || 0;
+            document.getElementById("javaCount").innerText = localStorage.getItem("Java") || 0;
+        }
+
+        function submitVote() {
+            const userId = document.getElementById("userId").value.trim();
+            if (!userId) {
+                alert("Please enter your User ID before voting!");
+                return;
+            }
+
+            if (localStorage.getItem("voted_" + userId)) {
+                alert("You have already voted!");
+                return;
+            }
+
+            const selectedOption = document.querySelector('input[name="poll"]:checked');
+            if (!selectedOption) {
+                alert("Please select an option before voting!");
+                return;
+            }
+
+            let vote = selectedOption.value;
+            let currentVotes = parseInt(localStorage.getItem(vote) || 0);
+            localStorage.setItem(vote, currentVotes + 1);
+
+            localStorage.setItem("voted_" + userId, vote);
+
+            loadVotes();
+            alert("Your vote has been recorded!");
+        }
+
+        window.onload = loadVotes;
+    </script>
+</body>
+</html>

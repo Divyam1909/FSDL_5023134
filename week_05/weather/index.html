@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../delivery/index.html">Online Delivery</a></li>
+                <li><a href="../cart/index.html">Shopping Cart</a></li>
+                <li><a href="../weather/index.html">Weather App</a></li>
+                <li><a href="../news/index.html">News App</a></li>
+                <li><a href="../carbon/index.html">Carbon Footprint Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="weather-app">
+            <h2>Check Weather</h2>
+            <form id="weather-form">
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="weather-result"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Weather App. All rights reserved.</p>
+    </footer>
+    <script src="weather.js"></script>
+</body>
+</html>
+

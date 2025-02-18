@@ -1,0 +1,27 @@
+#news-app {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .news-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .news-item h3 {
+    margin-top: 0;
+  }
+  
+  .news-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  

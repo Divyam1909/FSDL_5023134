@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../delivery/index.html">Online Delivery</a></li>
+                <li><a href="../cart/index.html">Shopping Cart</a></li>
+                <li><a href="../weather/index.html">Weather App</a></li>
+                <li><a href="../news/index.html">News App</a></li>
+                <li><a href="../carbon/index.html">Carbon Footprint Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="product-list">
+            <h2>Available Products</h2>
+            <ul>
+                <li>
+                    <span>Product 1</span>
+                    <span>₹500</span>
+                    <button onclick="addToCart('Product 1', 500)">Add to Cart</button>
+                </li>
+                <li>
+                    <span>Product 2</span>
+                    <span>₹750</span>
+                    <button onclick="addToCart('Product 2', 750)">Add to Cart</button>
+                </li>
+                <li>
+                    <span>Product 3</span>
+                    <span>₹1000</span>
+                    <button onclick="addToCart('Product 3', 1000)">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+        <div id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Shopping Cart. All rights reserved.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
+
